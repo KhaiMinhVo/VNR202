@@ -1,0 +1,131 @@
+.story-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: var(--font-body);
+  color: var(--color-white);
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.story-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--color-gold);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.story-subtitle {
+  font-size: 1.1rem;
+  color: rgba(240, 236, 228, 0.7);
+}
+
+.story-board {
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* scanline effect for cinematic feel */
+.story-board::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.story-content {
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.story-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.story-text p {
+  margin-bottom: 15px;
+}
+
+.text-gameover {
+  color: #ff8a80;
+  font-style: italic;
+}
+
+.text-victory {
+  color: #a5d6a7;
+  font-style: italic;
+}
+
+.story-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.choice-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 167, 69, 0.3);
+  border-left: 4px solid var(--color-gold);
+  border-radius: 6px;
+  padding: 18px 25px;
+  font-size: 1.15rem;
+  color: var(--color-white);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.choice-btn:hover {
+  background: rgba(212, 167, 69, 0.15);
+  border-color: var(--color-gold);
+  transform: translateX(5px);
+}
+
+.restart-choice {
+  text-align: center;
+  border-left: 1px solid rgba(212, 167, 69, 0.3);
+  background: rgba(198, 40, 40, 0.3);
+  border-color: #f44336;
+}
+
+.restart-choice:hover {
+  background: rgba(198, 40, 40, 0.5);
+  border-color: #ff5252;
+  transform: translateY(-3px);
+}

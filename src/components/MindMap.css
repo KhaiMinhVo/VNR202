@@ -1,0 +1,221 @@
+.mindmap-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: var(--font-body);
+  color: var(--color-white);
+  overflow-x: auto;
+}
+
+.mindmap-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mindmap-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--color-gold);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mindmap-subtitle {
+  font-size: 1.1rem;
+  color: rgba(240, 236, 228, 0.7);
+}
+
+/* ---- TREE DIAGRAM ---- */
+.tree-diagram {
+  display: flex;
+  justify-content: center;
+  min-width: 1000px; /* Ensure it doesn't squish too much on small screens */
+}
+
+.tree-diagram ul {
+  padding-top: 20px; 
+  position: relative;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.tree-diagram li {
+  float: left; 
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 8px 0 8px; /* Reduced horizontal padding */
+  transition: all 0.5s;
+}
+
+/* Connectors */
+.tree-diagram li::before, .tree-diagram li::after {
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  right: 50%;
+  border-top: 2px solid rgba(212, 167, 69, 0.5); /* Gold with opacity */
+  width: 50%; 
+  height: 20px;
+}
+.tree-diagram li::after {
+  right: auto; 
+  left: 50%;
+  border-left: 2px solid rgba(212, 167, 69, 0.5);
+}
+
+/* Remove left/right connectors from first/last child */
+.tree-diagram li:only-child::after, .tree-diagram li:only-child::before {
+  display: none;
+}
+.tree-diagram li:only-child { 
+  padding-top: 0; 
+}
+.tree-diagram li:first-child::before, .tree-diagram li:last-child::after {
+  border: 0 none;
+}
+.tree-diagram li:last-child::before {
+  border-right: 2px solid rgba(212, 167, 69, 0.5);
+  border-radius: 0 8px 0 0;
+}
+.tree-diagram li:first-child::after {
+  border-radius: 8px 0 0 0;
+}
+
+/* Downward connectors from parents */
+.tree-diagram ul ul::before {
+  content: '';
+  position: absolute; 
+  top: 0; 
+  left: 50%;
+  border-left: 2px solid rgba(212, 167, 69, 0.5);
+  width: 0; 
+  height: 20px;
+  transform: translateX(-1px);
+}
+
+/* ---- NODE STYLING ---- */
+.node {
+  border: 1px solid rgba(212, 167, 69, 0.6);
+  padding: 12px 10px;
+  display: inline-block;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(5px);
+  color: var(--color-white);
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  min-width: 170px;
+  z-index: 2;
+}
+
+.node h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 5px;
+  color: var(--color-gold);
+}
+
+.node p {
+  font-size: 0.8rem;
+  color: rgba(240, 236, 228, 0.8);
+}
+
+.root-node {
+  background: linear-gradient(135deg, #a01010, #d32f2f);
+  border: 2px solid #ff5252;
+  padding: 25px 40px;
+}
+.root-node h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.branch-node {
+  cursor: pointer;
+  border-width: 2px;
+}
+.branch-node:hover {
+  background: rgba(212, 167, 69, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(212, 167, 69, 0.4);
+}
+.branch-node.active {
+  background: var(--color-gold);
+}
+.branch-node.active h3, .branch-node.active p {
+  color: #1a0a0a;
+}
+
+.leaf-group {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  position: absolute; /* Hide from layout initially */
+  visibility: hidden;
+}
+
+.leaf-group.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative; /* Bring back into layout */
+  visibility: visible;
+}
+
+.leaf-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vertical layout for leaves */
+.tree-diagram .leaf-group li {
+  float: none;
+  padding: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Connectors for vertical leaf list */
+.tree-diagram .leaf-group li::before, .tree-diagram .leaf-group li::after {
+  display: none; /* Hide standard horizontal connectors */
+}
+
+/* Custom vertical connector line */
+.tree-diagram .leaf-group li::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 20px;
+  background: rgba(212, 167, 69, 0.5);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.leaf-node {
+  font-size: 0.85rem;
+  border-color: rgba(255,255,255,0.15);
+  background: rgba(30, 30, 30, 0.8);
+  padding: 10px 12px;
+  min-width: 160px;
+  white-space: normal;
+}
+.leaf-node h3 { display: none; }
+
+.click-hint {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  margin-top: 10px;
+  font-style: italic;
+}
+.branch-node.active .click-hint {
+  color: rgba(0,0,0,0.6);
+}

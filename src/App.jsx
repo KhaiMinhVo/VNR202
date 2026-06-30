@@ -11,13 +11,13 @@ const scenes = [
   {
     id: 'opening',
     type: 'hero',
-    bg: '/scene_1965.png',
+    bg: '/scene_1965.jpg',
     overlay: 'heavy',
   },
   {
     id: 'boi-canh',
     type: 'narrative',
-    bg: '/scene_1965.png',
+    bg: '/scene_1965.jpg',
     overlay: 'dark',
     year: 'THÁNG 3, 1965',
     title: <>Khi chiến lược <span className="highlight-red">"Chiến tranh đặc biệt"</span> có nguy cơ phá sản hoàn toàn...</>,
@@ -43,7 +43,7 @@ const scenes = [
   {
     id: 'mien-bac',
     type: 'narrative',
-    bg: '/scene_north.png',
+    bg: '/scene_north.jpg',
     overlay: 'dark',
     year: 'HẬU PHƯƠNG LỚN • 1965 – 1968',
     title: <>Miền Bắc: <span className="highlight">Vừa sản xuất, vừa chiến đấu</span></>,
@@ -73,7 +73,7 @@ const scenes = [
   {
     id: 'mien-nam',
     type: 'narrative',
-    bg: '/scene_1968.png',
+    bg: '/scene_1968.jpg',
     overlay: 'dark',
     year: 'TIỀN TUYẾN LỚN • 1965 – 1968',
     title: <>Miền Nam: <span className="highlight-red">Bẻ gãy Chiến tranh Cục bộ</span></>,
@@ -97,7 +97,7 @@ const scenes = [
   {
     id: 'mau-than',
     type: 'narrative',
-    bg: '/scene_1968.png',
+    bg: '/scene_1968.jpg',
     overlay: 'heavy',
     year: 'BƯỚC NGOẶT • XUÂN MẬU THÂN 1968',
     title: <>Tổng tiến công và nổi dậy <span className="highlight">Xuân Mậu Thân</span></>,
@@ -127,7 +127,7 @@ const scenes = [
   {
     id: 'viet-nam-hoa',
     type: 'narrative',
-    bg: '/scene_1972.png',
+    bg: '/scene_1972.jpg',
     overlay: 'dark',
     year: 'THÁCH THỨC MỚI • 1969 – 1973',
     title: <>Đánh bại <span className="highlight-red">"Việt Nam hóa chiến tranh"</span></>,
@@ -146,7 +146,7 @@ const scenes = [
   {
     id: 'dien-bien-phu-trk',
     type: 'narrative',
-    bg: '/scene_1972.png',
+    bg: '/scene_1972.jpg',
     overlay: 'heavy',
     year: 'HÀ NỘI • 12 NGÀY ĐÊM CUỐI 1972',
     title: <><span className="highlight">Điện Biên Phủ</span> trên không</>,
@@ -164,7 +164,7 @@ const scenes = [
   {
     id: 'dai-thang',
     type: 'victory',
-    bg: '/scene_1975.png',
+    bg: '/scene_1975.jpg',
     overlay: 'victory',
     year: 'MÙA XUÂN 1975',
     title: <>Đại thắng <span className="highlight">Mùa Xuân 1975</span></>,
@@ -183,7 +183,7 @@ const scenes = [
   {
     id: 'thong-nhat',
     type: 'victory',
-    bg: '/scene_1975.png',
+    bg: '/scene_1975.jpg',
     overlay: 'heavy',
     year: '30 THÁNG 4, 1975',
     title: <>Ngày <span className="highlight">Thống Nhất</span></>,

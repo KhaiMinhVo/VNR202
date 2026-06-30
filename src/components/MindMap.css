@@ -152,24 +152,19 @@
 }
 
 .leaf-group {
+  display: none;
+  flex-direction: column;
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
-  position: absolute; /* Hide from layout initially */
-  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .leaf-group.show {
+  display: flex;
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  position: relative; /* Bring back into layout */
-  visibility: visible;
-}
-
-.leaf-group {
-  display: flex;
-  flex-direction: column;
 }
 
 /* Vertical layout for leaves */

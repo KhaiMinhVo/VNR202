@@ -112,7 +112,7 @@ const scenes = [
   {
     id: 'bac-ho',
     type: 'mourning',
-    bg: '/scene_bacho.png',
+    bg: '/scene_bacho.jpg',
     overlay: 'mourning',
     year: '2 THÁNG 9, 1969',
     title: <>Chủ tịch Hồ Chí Minh <span className="highlight">vĩnh biệt chúng ta</span></>,

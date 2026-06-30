@@ -219,3 +219,101 @@
 .branch-node.active .click-hint {
   color: rgba(0,0,0,0.6);
 }
+
+/* Interactive Leaf Nodes */
+.leaf-group li {
+  cursor: pointer;
+}
+.leaf-node.interactive {
+  transition: all 0.3s ease;
+}
+.leaf-group li:hover .leaf-node.interactive {
+  background: rgba(212, 167, 69, 0.2);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Modal Popup */
+.mindmap-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.mindmap-modal-content {
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid var(--color-gold);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+  animation: slideUp 0.3s ease;
+}
+
+.mindmap-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--color-gray);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.mindmap-modal-close:hover {
+  color: var(--color-red);
+}
+
+.mindmap-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--color-gold);
+  margin-bottom: 20px;
+  padding-right: 30px;
+}
+
+.mindmap-modal-image-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.mindmap-modal-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.mindmap-modal-text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-white);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}

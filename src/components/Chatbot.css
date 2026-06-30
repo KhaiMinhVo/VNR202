@@ -129,18 +129,21 @@
 
 .message.user {
   align-self: flex-end;
-  background: rgba(212, 167, 69, 0.15);
-  border: 1px solid rgba(212, 167, 69, 0.3);
-  color: var(--color-white);
+  background: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  color: #1a0a0a;
   border-bottom-right-radius: 2px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(212, 167, 69, 0.3);
 }
 
 .message.assistant {
   align-self: flex-start;
-  background: rgba(30, 30, 30, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(240, 236, 228, 0.9);
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(212, 167, 69, 0.4);
+  color: rgba(255, 255, 255, 0.95);
   border-bottom-left-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .message.assistant::before {

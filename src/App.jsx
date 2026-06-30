@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { FaStar } from 'react-icons/fa';
 import Chatbot from './components/Chatbot';
 import MindMap from './components/MindMap';
+import AIUsage from './components/AIUsage';
+import TeamTask from './components/TeamTask';
 import './App.css';
 
 /* ============================================
@@ -353,6 +355,8 @@ function App() {
           <li><a href="#dien-bien-phu-trk">ĐBP Trên không</a></li>
           <li><a href="#thong-nhat">Đại thắng 1975</a></li>
           <li><a href="#mindmap-section">Sơ đồ tổng kết</a></li>
+          <li><a href="#team-task">Chia Task</a></li>
+          <li><a href="#ai-usage">AI USAGE</a></li>
         </ul>
       </nav>
 
@@ -412,9 +416,13 @@ function App() {
       </section>
 
       {/* Quiz/Story Section */}
-      <div id="mindmap-section" className="quiz-section" style={{ padding: '80px 20px', background: 'linear-gradient(to bottom, #1a0a0a, var(--color-warm-black))' }}>
+      <div id="mindmap-section" className="quiz-section" style={{ padding: '80px 20px', background: 'linear-gradient(to bottom, #1a0a0a, #0d0b0a)' }}>
         <MindMap />
       </div>
+
+      <TeamTask />
+      
+      <AIUsage />
 
       {/* Footer */}
       <footer className="cinematic-footer">

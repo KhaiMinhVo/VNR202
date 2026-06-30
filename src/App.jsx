@@ -152,7 +152,7 @@ const scenes = [
     title: <><span className="highlight">Điện Biên Phủ</span> trên không</>,
     desc: 'Đập tan cuộc tập kích chiến lược bằng B-52 của đế quốc Mỹ (Chiến dịch Linebacker II), buộc Mỹ ký Hiệp định Paris.',
     stats: [
-      { number: '81', label: 'Máy bay Mỹ bị bắn rơi' },
+      { number: '84', label: 'Máy bay Mỹ bị bắn rơi' },
       { number: '34', label: 'Chiếc B-52 "Pháo đài bay"' },
       { number: '27/1/1973', label: 'Ký Hiệp định Paris' },
     ],

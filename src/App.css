@@ -54,6 +54,9 @@
   justify-content: center;
   overflow: hidden;
   scroll-snap-align: start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Background image layer */

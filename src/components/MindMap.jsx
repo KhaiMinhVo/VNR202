@@ -27,6 +27,11 @@ const EVENT_DETAILS = {
     content: 'Từ 1965 đến 1968, Mỹ tiến hành chiến tranh phá hoại miền Bắc bằng không quân và hải quân. Miền Bắc vừa sản xuất vừa chiến đấu, bắn rơi hàng ngàn máy bay địch, bảo vệ vững chắc hậu phương.',
     image: '/scene_north.jpg'
   },
+  'chi-vien': {
+    title: 'Đảm bảo chi viện tối đa cho miền Nam',
+    content: 'Mặc dù bị đánh phá ác liệt, tuyến đường Hồ Chí Minh trên bộ và trên biển vẫn được giữ vững và mở rộng, đưa hàng chục vạn cán bộ, chiến sĩ và hàng triệu tấn vũ khí, đạn dược vào chiến trường miền Nam.',
+    image: '/scene_north.jpg'
+  },
   'mau-than-1': {
     title: 'Tổng tiến công và nổi dậy toàn miền',
     content: 'Đêm 30, rạng sáng mùng 1 Tết Mậu Thân 1968, quân dân ta đồng loạt tiến công và nổi dậy ở 37 thị xã, hàng trăm thị trấn, đánh thẳng vào các cơ quan đầu não của địch ở Sài Gòn, Huế...',
@@ -36,6 +41,16 @@ const EVENT_DETAILS = {
     title: 'Làm phá sản "Chiến tranh cục bộ"',
     content: 'Thắng lợi của chiến dịch Mậu Thân đã làm lung lay ý chí xâm lược của Mỹ, buộc Tổng thống Johnson phải tuyên bố ngừng ném bom miền Bắc và thừa nhận sự phá sản của chiến lược "Chiến tranh cục bộ".',
     image: '/scene_1968.jpg'
+  },
+  'mau-than-3': {
+    title: 'Mỹ buộc phải ngồi vào bàn đàm phán',
+    content: 'Sau đòn đau Mậu Thân, Mỹ buộc phải chấp nhận ngồi vào bàn đàm phán bốn bên tại Paris để giải quyết vấn đề hòa bình ở Việt Nam.',
+    image: '/scene_1968.jpg'
+  },
+  'chong-pha-hoai-2': {
+    title: 'Chống chiến tranh phá hoại lần 2',
+    content: 'Năm 1972, Mỹ tiến hành cuộc chiến tranh phá hoại miền Bắc lần thứ hai hòng cứu vãn chiến lược "Việt Nam hóa chiến tranh" đang có nguy cơ phá sản. Quân dân miền Bắc một lần nữa kiên cường đánh trả.',
+    image: '/scene_1972.jpg'
   },
   'dien-bien-phu-tren-khong': {
     title: 'Điện Biên Phủ trên không đập tan B-52',
@@ -47,6 +62,16 @@ const EVENT_DETAILS = {
     content: 'Ngày 27/1/1973, Hiệp định Paris về chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam được ký kết. Mỹ buộc phải rút toàn bộ quân viễn chinh về nước, tạo thế thuận lợi cho ta tiến lên giải phóng hoàn toàn miền Nam.',
     image: '/scene_1972.jpg'
   },
+  'tay-nguyen': {
+    title: 'Chiến dịch Tây Nguyên (Giải phóng Ban Mê Thuột)',
+    content: 'Tháng 3/1975, ta mở chiến dịch Tây Nguyên, đánh đòn điểm huyệt vào Buôn Ma Thuột, làm rung chuyển toàn bộ hệ thống phòng ngự của địch ở miền Nam.',
+    image: '/scene_1975.jpg'
+  },
+  'hue-da-nang': {
+    title: 'Chiến dịch Huế - Đà Nẵng',
+    content: 'Chỉ trong thời gian ngắn cuối tháng 3/1975, quân ta giải phóng hoàn toàn Huế và Đà Nẵng, đập tan hệ thống phòng ngự kiên cố của địch ở miền Trung.',
+    image: '/scene_1975.jpg'
+  },
   'chien-dich-ho-chi-minh': {
     title: 'Chiến dịch Hồ Chí Minh',
     content: 'Chiến dịch quyết chiến chiến lược lịch sử, đánh thẳng vào sào huyệt cuối cùng của địch tại Sài Gòn. Ngày 30/4/1975, cờ giải phóng tung bay trên Dinh Độc Lập, kết thúc thắng lợi cuộc kháng chiến chống Mỹ.',
@@ -54,164 +79,148 @@ const EVENT_DETAILS = {
   }
 };
 
-const MindMap = () => {
-  const [activeNode, setActiveNode] = useState(null);
+const BRANCHES = [
+  {
+    id: 'g1',
+    title: 'Chiến tranh Cục bộ',
+    period: '(1965 - 1967)',
+    leaves: [
+      { key: 'van-tuong', text: 'Trận Vạn Tường (1965) mở đầu' },
+      { key: 'mua-kho', text: 'Bẻ gãy 2 cuộc phản công mùa khô' },
+      { key: 'sinh-luc', text: 'Tiêu diệt sinh lực địch ở miền Nam' }
+    ]
+  },
+  {
+    id: 'g2',
+    title: 'Hậu phương Miền Bắc',
+    period: '(1965 - 1968)',
+    leaves: [
+      { key: 'ba-san-sang', text: 'Phong trào Ba sẵn sàng, Ba đảm đang' },
+      { key: 'chong-pha-hoai-1', text: 'Chống chiến tranh phá hoại lần 1' },
+      { key: 'chi-vien', text: 'Đảm bảo chi viện tối đa cho miền Nam' }
+    ]
+  },
+  {
+    id: 'g3',
+    title: 'Bước ngoặt Mậu Thân',
+    period: '(Năm 1968)',
+    leaves: [
+      { key: 'mau-than-1', text: 'Tổng tiến công và nổi dậy toàn miền' },
+      { key: 'mau-than-2', text: 'Làm phá sản "Chiến tranh cục bộ"' },
+      { key: 'mau-than-3', text: 'Mỹ buộc phải ngồi vào bàn đàm phán' }
+    ]
+  },
+  {
+    id: 'g4',
+    title: 'Quyết chiến chiến lược',
+    period: '(1972 - 1973)',
+    leaves: [
+      { key: 'chong-pha-hoai-2', text: 'Chống chiến tranh phá hoại lần 2' },
+      { key: 'dien-bien-phu-tren-khong', text: 'Điện Biên Phủ trên không' },
+      { key: 'hiep-dinh-paris', text: 'Ký Hiệp định Paris (1/1973)' }
+    ]
+  },
+  {
+    id: 'g5',
+    title: 'Đại thắng Mùa Xuân',
+    period: '(Năm 1975)',
+    leaves: [
+      { key: 'tay-nguyen', text: 'Chiến dịch Tây Nguyên' },
+      { key: 'hue-da-nang', text: 'Chiến dịch Huế - Đà Nẵng' },
+      { key: 'chien-dich-ho-chi-minh', text: 'Chiến dịch Hồ Chí Minh' }
+    ]
+  }
+];
+
+// Force HMR reload 1
+export default function MindMap() {
+  const [activeBranch, setActiveBranch] = useState(null);
   const [modalData, setModalData] = useState(null);
 
-  const toggleNode = (id) => {
-    if (activeNode === id) {
-      setActiveNode(null);
-    } else {
-      setActiveNode(id);
-    }
+  const toggleBranch = (id) => {
+    setActiveBranch(activeBranch === id ? null : id);
   };
 
-  const openModal = (key, title) => {
+  const openModal = (key) => {
     if (EVENT_DETAILS[key]) {
       setModalData(EVENT_DETAILS[key]);
     } else {
       setModalData({ 
-        title: title, 
-        content: 'Đang cập nhật thông tin chi tiết và hình ảnh tư liệu cho sự kiện lịch sử này...',
+        title: 'Đang cập nhật', 
+        content: 'Chưa có thông tin cho mục này.',
         image: null
       });
     }
   };
 
-  const closeModal = () => setModalData(null);
-
   return (
-    <div className="mindmap-container">
-      <div className="mindmap-header">
-        <h2 className="mindmap-title">Sơ đồ Tư duy Tổng kết</h2>
-        <p className="mindmap-subtitle">Hệ thống hóa kiến thức giai đoạn 1965 - 1975</p>
+    <div className="mm-wrapper">
+      <div className="mm-header">
+        <h2 className="mm-title">Sơ đồ Tư duy Tổng kết</h2>
+        <p className="mm-subtitle">Hệ thống hóa kiến thức giai đoạn 1965 - 1975</p>
       </div>
 
-      <div className="tree-diagram">
-        <ul>
-          <li>
-            <div className="node root-node">
-              <h3>Đảng Lãnh Đạo Kháng Chiến</h3>
-              <p>(1965 - 1975)</p>
+      <div className="mm-canvas">
+        {/* ROOT NODE */}
+        <div className="mm-root">
+          <h3>Đảng Lãnh Đạo Kháng Chiến</h3>
+          <p>(1965 - 1975)</p>
+        </div>
+
+        {/* CONNECTORS */}
+        <div className="mm-line-vertical-main"></div>
+        <div className="mm-line-horizontal"></div>
+
+        {/* BRANCHES ROW */}
+        <div className="mm-branches-row">
+          {BRANCHES.map(branch => (
+            <div key={branch.id} className="mm-branch-col">
+              <div className="mm-line-vertical-branch"></div>
+              
+              <div 
+                className={`mm-branch-box ${activeBranch === branch.id ? 'active' : ''}`}
+                onClick={() => toggleBranch(branch.id)}
+              >
+                <h3>{branch.title}</h3>
+                <p>{branch.period}</p>
+                <span className="mm-hint">Bấm để xem chi tiết</span>
+              </div>
+
+              {/* LEAVES (Conditional Rendering) */}
+              {activeBranch === branch.id && (
+                <div className="mm-leaves-container">
+                  <div className="mm-line-vertical-leaf"></div>
+                  {branch.leaves.map(leaf => (
+                    <div 
+                      key={leaf.key} 
+                      className="mm-leaf-box"
+                      onClick={() => openModal(leaf.key)}
+                    >
+                      {leaf.text}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-            <ul>
-              <li>
-                <div 
-                  className={`node branch-node \${activeNode === 'g1' ? 'active' : ''}`}
-                  onClick={() => toggleNode('g1')}
-                >
-                  <h3>Chiến tranh Cục bộ</h3>
-                  <p>(1965 - 1967)</p>
-                  <span className="click-hint">Bấm để xem chi tiết</span>
-                </div>
-                <ul className={`leaf-group \${activeNode === 'g1' ? 'show' : ''}`}>
-                  <li onClick={() => openModal('van-tuong', 'Trận Vạn Tường (1965) mở đầu')}><div className="node leaf-node interactive">Trận Vạn Tường (1965) mở đầu</div></li>
-                  <li onClick={() => openModal('mua-kho', 'Bẻ gãy 2 cuộc phản công mùa khô')}><div className="node leaf-node interactive">Bẻ gãy 2 cuộc phản công mùa khô</div></li>
-                  <li onClick={() => openModal('sinh-luc', 'Tiêu diệt sinh lực địch ở miền Nam')}><div className="node leaf-node interactive">Tiêu diệt sinh lực địch ở miền Nam</div></li>
-                </ul>
-              </li>
-
-              <li>
-                <div 
-                  className={`node branch-node \${activeNode === 'g2' ? 'active' : ''}`}
-                  onClick={() => toggleNode('g2')}
-                >
-                  <h3>Hậu phương Miền Bắc</h3>
-                  <p>(1965 - 1968)</p>
-                  <span className="click-hint">Bấm để xem chi tiết</span>
-                </div>
-                <ul className={`leaf-group \${activeNode === 'g2' ? 'show' : ''}`}>
-                  <li onClick={() => openModal('ba-san-sang', 'Phong trào Ba sẵn sàng, Ba đảm đang')}><div className="node leaf-node interactive">Phong trào Ba sẵn sàng, Ba đảm đang</div></li>
-                  <li onClick={() => openModal('chong-pha-hoai-1', 'Chống chiến tranh phá hoại lần 1')}><div className="node leaf-node interactive">Chống chiến tranh phá hoại lần 1</div></li>
-                  <li onClick={() => openModal('chi-vien', 'Đảm bảo chi viện tối đa cho miền Nam')}><div className="node leaf-node interactive">Đảm bảo chi viện tối đa cho miền Nam</div></li>
-                </ul>
-              </li>
-
-              <li>
-                <div 
-                  className={`node branch-node \${activeNode === 'g3' ? 'active' : ''}`}
-                  onClick={() => toggleNode('g3')}
-                >
-                  <h3>Bước ngoặt Mậu Thân</h3>
-                  <p>(Năm 1968)</p>
-                  <span className="click-hint">Bấm để xem chi tiết</span>
-                </div>
-                <ul className={`leaf-group \${activeNode === 'g3' ? 'show' : ''}`}>
-                  <li onClick={() => openModal('mau-than-1', 'Tổng tiến công và nổi dậy toàn miền')}><div className="node leaf-node interactive">Tổng tiến công và nổi dậy toàn miền</div></li>
-                  <li onClick={() => openModal('mau-than-2', 'Làm phá sản "Chiến tranh cục bộ"')}><div className="node leaf-node interactive">Làm phá sản "Chiến tranh cục bộ"</div></li>
-                  <li onClick={() => openModal('dam-phan', 'Buộc Mỹ phải ngồi vào bàn đàm phán Paris')}><div className="node leaf-node interactive">Buộc Mỹ phải ngồi vào bàn đàm phán Paris</div></li>
-                </ul>
-              </li>
-
-              <li>
-                <div 
-                  className={`node branch-node \${activeNode === 'g4' ? 'active' : ''}`}
-                  onClick={() => toggleNode('g4')}
-                >
-                  <h3>Việt Nam hóa chiến tranh</h3>
-                  <p>(1969 - 1971)</p>
-                  <span className="click-hint">Bấm để xem chi tiết</span>
-                </div>
-                <ul className={`leaf-group \${activeNode === 'g4' ? 'show' : ''}`}>
-                  <li onClick={() => openModal('di-chuc', 'Thực hiện Di chúc thiêng liêng của Bác Hồ')}><div className="node leaf-node interactive">Thực hiện Di chúc thiêng liêng của Bác Hồ</div></li>
-                  <li onClick={() => openModal('duong-9', 'Đánh bại cuộc phản công Đường 9 - Nam Lào')}><div className="node leaf-node interactive">Đánh bại cuộc phản công Đường 9 - Nam Lào</div></li>
-                  <li onClick={() => openModal('pha-vo-am-muu', 'Phá vỡ âm mưu "dùng người Việt đánh người Việt"')}><div className="node leaf-node interactive">Phá vỡ âm mưu "dùng người Việt đánh người Việt"</div></li>
-                </ul>
-              </li>
-
-              <li>
-                <div 
-                  className={`node branch-node \${activeNode === 'g5' ? 'active' : ''}`}
-                  onClick={() => toggleNode('g5')}
-                >
-                  <h3>Quyết chiến chiến lược</h3>
-                  <p>(1972 - 1973)</p>
-                  <span className="click-hint">Bấm để xem chi tiết</span>
-                </div>
-                <ul className={`leaf-group \${activeNode === 'g5' ? 'show' : ''}`}>
-                  <li onClick={() => openModal('thanh-co', 'Bảo vệ Thành cổ Quảng Trị (81 ngày đêm)')}><div className="node leaf-node interactive">Bảo vệ Thành cổ Quảng Trị (81 ngày đêm)</div></li>
-                  <li onClick={() => openModal('dien-bien-phu-tren-khong', 'Điện Biên Phủ trên không đập tan B-52')}><div className="node leaf-node interactive">Điện Biên Phủ trên không đập tan B-52</div></li>
-                  <li onClick={() => openModal('hiep-dinh-paris', 'Ký Hiệp định Paris (1/1973), Mỹ phải rút quân')}><div className="node leaf-node interactive">Ký Hiệp định Paris (1/1973), Mỹ phải rút quân</div></li>
-                </ul>
-              </li>
-
-              <li>
-                <div 
-                  className={`node branch-node \${activeNode === 'g6' ? 'active' : ''}`}
-                  onClick={() => toggleNode('g6')}
-                >
-                  <h3>Đại thắng Mùa Xuân</h3>
-                  <p>(Năm 1975)</p>
-                  <span className="click-hint">Bấm để xem chi tiết</span>
-                </div>
-                <ul className={`leaf-group \${activeNode === 'g6' ? 'show' : ''}`}>
-                  <li onClick={() => openModal('tay-nguyen', 'Chiến dịch Tây Nguyên (Mở màn)')}><div className="node leaf-node interactive">Chiến dịch Tây Nguyên (Mở màn)</div></li>
-                  <li onClick={() => openModal('hue-da-nang', 'Chiến dịch Huế - Đà Nẵng (Đòn chia cắt)')}><div className="node leaf-node interactive">Chiến dịch Huế - Đà Nẵng (Đòn chia cắt)</div></li>
-                  <li onClick={() => openModal('chien-dich-ho-chi-minh', 'Chiến dịch Hồ Chí Minh (Đòn quyết định toàn thắng)')}><div className="node leaf-node interactive">Chiến dịch Hồ Chí Minh (Đòn quyết định toàn thắng)</div></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          ))}
+        </div>
       </div>
 
       {/* MODAL POPUP */}
       {modalData && (
-        <div className="mindmap-modal-overlay" onClick={closeModal}>
-          <div className="mindmap-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="mindmap-modal-close" onClick={closeModal}>&times;</button>
-            <h3 className="mindmap-modal-title">{modalData.title}</h3>
+        <div className="mm-modal-overlay" onClick={() => setModalData(null)}>
+          <div className="mm-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="mm-modal-close" onClick={() => setModalData(null)}>&times;</button>
+            <h3 className="mm-modal-title">{modalData.title}</h3>
             {modalData.image && (
-              <div className="mindmap-modal-image-wrapper">
-                <img src={modalData.image} alt={modalData.title} className="mindmap-modal-image" />
+              <div className="mm-modal-image-wrapper">
+                <img src={modalData.image} alt={modalData.title} className="mm-modal-img" />
               </div>
             )}
-            <p className="mindmap-modal-text">{modalData.content}</p>
+            <p className="mm-modal-text">{modalData.content}</p>
           </div>
         </div>
       )}
     </div>
   );
-};
-
-export default MindMap;
+}

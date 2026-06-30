@@ -115,14 +115,14 @@ Hãy suy nghĩ và trả lời ngắn gọn, rõ ràng, thân thiện cho câu h
 
           <div className="chatbot-messages">
             {messages.map((msg, idx) => (
-              <div key={idx} className={`message \${msg.role}`}>
+              <div key={idx} className={`message message-${msg.role}`}>
                 <div className="message-content">
                   <ReactMarkdown>{msg.content}</ReactMarkdown>
                 </div>
               </div>
             ))}
             {isLoading && (
-              <div className="message assistant">
+              <div className="message message-assistant">
                 <div className="message-content typing">ĐANG NHẬN TÍN HIỆU...</div>
               </div>
             )}

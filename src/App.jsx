@@ -3,7 +3,6 @@ import { FaStar } from 'react-icons/fa';
 import Chatbot from './components/Chatbot';
 import MindMap from './components/MindMap';
 import AIUsage from './components/AIUsage';
-import TeamTask from './components/TeamTask';
 import './App.css';
 
 /* ============================================
@@ -355,7 +354,6 @@ function App() {
           <li><a href="#dien-bien-phu-trk">ĐBP Trên không</a></li>
           <li><a href="#thong-nhat">Đại thắng 1975</a></li>
           <li><a href="#mindmap-section">Sơ đồ tổng kết</a></li>
-          <li><a href="#team-task">Chia Task</a></li>
           <li><a href="#ai-usage">AI USAGE</a></li>
         </ul>
       </nav>
@@ -420,8 +418,6 @@ function App() {
         <MindMap />
       </div>
 
-      <TeamTask />
-      
       <AIUsage />
 
       {/* Footer */}

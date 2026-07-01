@@ -5,37 +5,43 @@ const EVENT_DETAILS = {
   'van-tuong': {
     title: 'Trận Vạn Tường (1965) mở đầu',
     content: 'Trận Vạn Tường diễn ra vào tháng 8/1965 tại Quảng Ngãi. Đây là đòn phủ đầu giáng vào quân viễn chinh Mỹ, chứng minh quân dân miền Nam hoàn toàn có khả năng đánh bại ưu thế tuyệt đối về hỏa lực và binh khí kỹ thuật của đế quốc Mỹ. Trận này được coi là "Ấp Bắc" đối với quân Mỹ.',
-    images: ['/5.jpg', '/6.jpg']
+    images: ['/5.jpg', '/6.jpg'],
+    videoUrl: 'https://www.youtube.com/watch?v=l00LQllNYfY'
   },
   'mua-kho': {
     title: 'Bẻ gãy 2 cuộc phản công mùa khô',
     content: 'Mỹ mở hai cuộc phản công chiến lược mùa khô (1965-1966 và 1966-1967) với hàng chục vạn quân Mỹ và chư hầu nhằm mục tiêu "tìm diệt" quân chủ lực của ta và "bình định" miền Nam. Tuy nhiên, mọi nỗ lực của chúng đều bị quân dân ta bẻ gãy, tổn thất nặng nề.',
-    images: ['/scene_1965.jpg', '/scene_1968.jpg']
+    images: ['/7.jpg', '/8.jpg', '/9.jpg'],
+    videoUrl: 'https://www.youtube.com/watch?v=59pzPC0JtY4'
   },
   'sinh-luc': {
     title: 'Tiêu diệt sinh lực địch ở miền Nam',
     content: 'Quân dân ta liên tục quấy rối, đánh tỉa, và tổ chức các trận đánh lớn nhỏ khắp các chiến trường, làm hao mòn nghiêm trọng sinh lực địch, khiến chúng không thể thực hiện được mục tiêu chiến lược đề ra.',
-    images: ['/scene_1968.jpg', '/scene_1975.jpg']
+    images: ['/10.jpg', '/11.jpg']
   },
   'ba-san-sang': {
     title: 'Phong trào Ba sẵn sàng, Ba đảm đang',
     content: 'Phong trào "Ba sẵn sàng" của thanh niên và "Ba đảm đang" của phụ nữ miền Bắc đã dấy lên một cao trào thi đua yêu nước sôi nổi, chi viện sức người sức của khổng lồ cho tiền tuyến miền Nam.',
-    images: ['/scene_north.jpg', '/scene_1965.jpg']
+    images: ['/12.jpg', '/13.jpg', '/14.jpg', '/15.jpg', '/16.jpg'],
+    videoUrl: 'https://www.youtube.com/watch?v=O_kGX7owmHk'
   },
   'chong-pha-hoai-1': {
     title: 'Chống chiến tranh phá hoại lần 1',
     content: 'Từ 1965 đến 1968, Mỹ tiến hành chiến tranh phá hoại miền Bắc bằng không quân và hải quân. Miền Bắc vừa sản xuất vừa chiến đấu, bắn rơi hàng ngàn máy bay địch, bảo vệ vững chắc hậu phương.',
-    images: ['/scene_north.jpg', '/scene_1972.jpg']
+    images: ['/17.jpg', '/18.jpg']
   },
   'chi-vien': {
     title: 'Đảm bảo chi viện tối đa cho miền Nam',
     content: 'Mặc dù bị đánh phá ác liệt, tuyến đường Hồ Chí Minh trên bộ và trên biển vẫn được giữ vững và mở rộng, đưa hàng chục vạn cán bộ, chiến sĩ và hàng triệu tấn vũ khí, đạn dược vào chiến trường miền Nam.',
-    images: ['/scene_north.jpg', '/scene_1968.jpg']
+    images: ['/19.jpg', '/20.jpg'],
+    videoUrl: 'https://www.youtube.com/watch?v=GK7Ts6wS5x4'
   },
   'mau-than-1': {
     title: 'Tổng tiến công và nổi dậy toàn miền',
     content: 'Đêm 30, rạng sáng mùng 1 Tết Mậu Thân 1968, quân dân ta đồng loạt tiến công và nổi dậy ở 37 thị xã, hàng trăm thị trấn, đánh thẳng vào các cơ quan đầu não của địch ở Sài Gòn, Huế...',
-    images: ['/scene_1968.jpg', '/scene_1965.jpg']
+    images: ['/scene_1968.jpg', '/scene_1965.jpg'],
+    articleUrl: 'https://www.qdnd.vn/50nam-tong-tien-cong-va-noi-day-xuan-mau-than1968/danh-gia-phan-tich/cuoc-tong-tien-cong-va-noi-day-tet-mau-than-1968-trong-tien-trinh-lich-su-viet-nam-532112',
+    videoUrl: 'https://www.youtube.com/watch?v=4Ns3quhYoKQ'
   },
   'mau-than-2': {
     title: 'Làm phá sản "Chiến tranh cục bộ"',
@@ -50,32 +56,43 @@ const EVENT_DETAILS = {
   'chong-pha-hoai-2': {
     title: 'Chống chiến tranh phá hoại lần 2',
     content: 'Năm 1972, Mỹ tiến hành cuộc chiến tranh phá hoại miền Bắc lần thứ hai hòng cứu vãn chiến lược "Việt Nam hóa chiến tranh" đang có nguy cơ phá sản. Quân dân miền Bắc một lần nữa kiên cường đánh trả.',
-    images: ['/scene_1972.jpg', '/scene_north.jpg']
+    images: ['/21.jpg', '/22.jpg'],
+    articleUrl: 'https://www.qdnd.vn/vung-buoc-duoi-quan-ky-quyet-thang/lich-su-quan-doi-nhan-dan-viet-nam/thang-loi-ban-le-trong-tien-trinh-khang-chien-chong-my-cuu-nuoc-806023'
   },
   'dien-bien-phu-tren-khong': {
     title: 'Điện Biên Phủ trên không đập tan B-52',
     content: 'Trong 12 ngày đêm cuối năm 1972, quân dân Hà Nội, Hải Phòng đã đánh bại cuộc tập kích chiến lược bằng pháo đài bay B-52 của Mỹ, bắn rơi 84 máy bay, làm nên chiến thắng "Điện Biên Phủ trên không".',
-    images: ['/scene_1972.jpg', '/scene_1968.jpg']
+    images: ['/23.jpg', '/24.jpg'],
+    articleUrl: 'https://www.qdnd.vn/quoc-phong-an-ninh/nghe-thuat-quan-su-vn/chien-thang-ha-noi-dien-bien-phu-tren-khong-gop-phan-thay-doi-cuc-dien-chien-tranh-826017',
+    videoUrl: 'https://www.youtube.com/watch?v=gzCFLH7HH24'
   },
   'hiep-dinh-paris': {
     title: 'Ký Hiệp định Paris (1/1973)',
     content: 'Ngày 27/1/1973, Hiệp định Paris về chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam được ký kết. Mỹ buộc phải rút toàn bộ quân viễn chinh về nước, tạo thế thuận lợi cho ta tiến lên giải phóng hoàn toàn miền Nam.',
-    images: ['/scene_1972.jpg', '/scene_1975.jpg']
+    images: ['/25.jpg'],
+    articleUrl: 'https://special.nhandan.vn/hiepdinhparis/index.html',
+    videoUrl: 'https://youtu.be/XWOa3P3QbRQ?si=ybZhXv9sq08pczk9'
   },
   'tay-nguyen': {
     title: 'Chiến dịch Tây Nguyên (Giải phóng Ban Mê Thuột)',
     content: 'Tháng 3/1975, ta mở chiến dịch Tây Nguyên, đánh đòn điểm huyệt vào Buôn Ma Thuột, làm rung chuyển toàn bộ hệ thống phòng ngự của địch ở miền Nam.',
-    images: ['/scene_1975.jpg', '/scene_1972.jpg']
+    images: ['/26.jpg', '/27.jpg', '/28.jpg'],
+    articleUrl: 'https://special.nhandan.vn/boi-canh-lich-su-cua-chien-dich-tay-nguyen/index.html',
+    videoUrl: 'https://www.youtube.com/watch?si=x-miMz-hyEE7Tv8E&v=BdBzwFmpdxU&feature=youtu.be'
   },
   'hue-da-nang': {
     title: 'Chiến dịch Huế - Đà Nẵng',
     content: 'Chỉ trong thời gian ngắn cuối tháng 3/1975, quân ta giải phóng hoàn toàn Huế và Đà Nẵng, đập tan hệ thống phòng ngự kiên cố của địch ở miền Trung.',
-    images: ['/scene_1975.jpg', '/scene_1968.jpg']
+    images: ['/29.jpg', '/30.jpg', '/31.jpg'],
+    articleUrl: 'https://special.nhandan.vn/chien-dich-Hue-Da-Nang/index.html',
+    videoUrl: 'https://youtu.be/RR13VkRLgEM?si=yK2axg5eggj5QCkc'
   },
   'chien-dich-ho-chi-minh': {
     title: 'Chiến dịch Hồ Chí Minh',
     content: 'Chiến dịch quyết chiến chiến lược lịch sử, đánh thẳng vào sào huyệt cuối cùng của địch tại Sài Gòn. Ngày 30/4/1975, cờ giải phóng tung bay trên Dinh Độc Lập, kết thúc thắng lợi cuộc kháng chiến chống Mỹ.',
-    images: ['/scene_1975.jpg', '/scene_1965.jpg']
+    images: ['/32.jpg', '/33.jpg'],
+    articleUrl: 'https://www.qdnd.vn/vung-buoc-duoi-quan-ky-quyet-thang/lich-su-quan-doi-nhan-dan-viet-nam/chien-dich-ho-chi-minh-lich-su-ket-thuc-thang-loi-cuoc-khang-chien-chong-my-cuu-nuoc-807001',
+    videoUrl: 'https://www.youtube.com/watch?si=YzvAN2beVuLcWW5F&v=YigIBVzv0Vw&feature=youtu.be'
   }
 };
 
@@ -261,8 +278,23 @@ export default function MindMap() {
 
             {/* RIGHT SIDE: Text Content */}
             <div className="mm-modal-right">
-              <h3 className="mm-modal-title">{modalData.title}</h3>
+              <div className="mm-modal-header">
+                <h3 className="mm-modal-title">{modalData.title}</h3>
+                {modalData.articleUrl && (
+                  <a href={modalData.articleUrl} target="_blank" rel="noopener noreferrer" className="mm-link-btn article-btn">
+                    Đọc bài báo
+                  </a>
+                )}
+              </div>
               <p className="mm-modal-text">{modalData.content}</p>
+              
+              {modalData.videoUrl && (
+                <div className="mm-modal-footer">
+                  <a href={modalData.videoUrl} target="_blank" rel="noopener noreferrer" className="mm-link-btn video-btn">
+                    <span className="play-icon">▶</span> Xem Video YouTube
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>

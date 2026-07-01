@@ -28,12 +28,12 @@ const AIUsage = () => {
             
             <div className="content-block">
               <h4>KIỂM CHỨNG THÔNG TIN</h4>
-              <p>Mọi nội dung do AI sinh ra (đặc biệt là tóm tắt lý luận chính trị) đều được đối chiếu trực tiếp với <strong>Giáo trình LLCT chính thống</strong> của trường. Nhóm chịu trách nhiệm 100% về độ chính xác của thông tin.</p>
+              <p>Mọi nội dung do AI sinh ra (đặc biệt là tóm tắt lý luận chính trị) đều được đối chiếu trực tiếp với <strong>Giáo trình LLCT chính thống</strong> của trường. Nhóm chịu trách nhiệm 100% về độ chính xác của thông tin lịch sử.</p>
             </div>
             
             <div className="content-block">
               <h4>PHÂN ĐỊNH RÕ RÀNG</h4>
-              <p>AI tạo ra tài nguyên thô (model 3D, text, ảnh). Sinh viên chịu trách nhiệm chỉnh sửa (optimize mesh 3D, cắt gọt nội dung, fix bug code) để tích hợp vào website.</p>
+              <p>AI hỗ trợ sinh ý tưởng thiết kế, dàn ý nội dung và code mẫu. Sinh viên chịu trách nhiệm biên tập lại nội dung, tối ưu mã nguồn, fix bug giao diện và hoàn thiện trải nghiệm UX/UI.</p>
             </div>
           </div>
         </div>
@@ -46,18 +46,18 @@ const AIUsage = () => {
           
           <div className="card-content-grid">
             <div className="content-block">
-              <h4>TÓM TẮT & KỊCH BẢN</h4>
-              <p>Dùng AI rút gọn giáo trình đồ sộ thành key-points. Nhóm dựa vào dàn ý đó để tự viết kịch bản tương tác và biên soạn bộ câu hỏi trắc nghiệm (quiz).</p>
+              <h4>TÓM TẮT & BIÊN TẬP NỘI DUNG</h4>
+              <p>Dùng AI rút gọn giáo trình đồ sộ thành key-points. Nhóm dựa vào dàn ý đó để biên soạn lại nội dung tóm tắt sự kiện cho Sơ đồ tư duy sao cho ngắn gọn, dễ hiểu.</p>
             </div>
             
             <div className="content-block">
-              <h4>TÀI NGUYÊN 3D GỐC</h4>
-              <p>Tự sinh model 3D thô bằng AI (không copy trên mạng). Sau đó, sinh viên tự tay thêm texture, chỉnh sửa ánh sáng để đưa vào môi trường web (Three.js).</p>
+              <h4>THIẾT KẾ GIAO DIỆN CỔ ĐIỂN</h4>
+              <p>Nhờ AI gợi ý dải màu (palette) và phông chữ phù hợp bối cảnh lịch sử. Sinh viên áp dụng bằng CSS thuần, tinh chỉnh độ tương phản, đổ bóng (shadow) để chữ nổi bật trên nền đen.</p>
             </div>
             
             <div className="content-block">
               <h4>PAIR-PROGRAMMING</h4>
-              <p>AI gợi ý các đoạn code lặp lại (boilerplate). Nhóm nắm giữ phần thiết kế kiến trúc, xử lý luồng dữ liệu (state management) và sửa lỗi logic.</p>
+              <p>AI gợi ý các đoạn code lặp lại (boilerplate code) cho React components. Nhóm nắm giữ phần thiết kế kiến trúc, xử lý state luồng dữ liệu (carousel, modal) và sửa lỗi logic.</p>
             </div>
           </div>
         </div>
@@ -72,16 +72,16 @@ const AIUsage = () => {
           <div className="tool-row">
             <div className="tool-info">
               <span className="tool-icon">📖</span>
-              <span className="tool-name">NotebookLM</span>
+              <span className="tool-name">NotebookLM & ChatGPT</span>
             </div>
             <div className="tool-details">
               <div className="tool-col ai-col">
                 <h5>VAI TRÒ CỦA AI (INPUT THÔ)</h5>
-                <p>Tóm tắt slide giáo trình của trường thành các từ khóa, ý chính.</p>
+                <p>Tóm tắt khối lượng lớn dữ liệu lịch sử từ slide giáo trình thành các mốc thời gian, từ khóa cốt lõi.</p>
               </div>
               <div className="tool-col human-col">
                 <h5>🧑‍🎓 SINH VIÊN XỬ LÝ (HOÀN THIỆN)</h5>
-                <p>Đối chiếu với giáo trình gốc. Biên tập lại thành câu thoại ngắn gọn. Tự biên soạn lại câu hỏi quiz để đảm bảo độ khó.</p>
+                <p>Đối chiếu tính xác thực với tài liệu gốc. Biên tập lại ngôn từ đảm bảo tính trang trọng, chính xác và phân chia cấu trúc cho Sơ đồ tư duy.</p>
               </div>
             </div>
           </div>
@@ -89,33 +89,16 @@ const AIUsage = () => {
           <div className="tool-row">
             <div className="tool-info">
               <span className="tool-icon">{'</>'}</span>
-              <span className="tool-name">Antigravity</span>
+              <span className="tool-name">Antigravity / AI Coding Assistants</span>
             </div>
             <div className="tool-details">
               <div className="tool-col ai-col">
                 <h5>VAI TRÒ CỦA AI (INPUT THÔ)</h5>
-                <p>Gợi ý cú pháp, viết nhanh boilerplate code trong lúc lập trình.</p>
+                <p>Gợi ý cú pháp React, CSS cơ bản, hỗ trợ viết boilerplate code và phát hiện lỗi cú pháp (syntax errors).</p>
               </div>
               <div className="tool-col human-col">
                 <h5>🧑‍🎓 SINH VIÊN XỬ LÝ (HOÀN THIỆN)</h5>
-                <p>Review toàn bộ logic. Cấu hình các thông số Three.js, xử lý các lỗi tương tác (click, hover, state).</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="tool-row">
-            <div className="tool-info">
-              <span className="tool-icon">🧊</span>
-              <span className="tool-name">Tencent 3D</span>
-            </div>
-            <div className="tool-details">
-              <div className="tool-col ai-col">
-                <h5>VAI TRÒ CỦA AI (INPUT THÔ)</h5>
-                <p>Tạo file 3D thô (base mesh) cho các vật thể trong môi trường.</p>
-              </div>
-              <div className="tool-col human-col">
-                <h5>🧑‍🎓 SINH VIÊN XỬ LÝ (HOÀN THIỆN)</h5>
-                <p>Giảm dung lượng lưới (optimize mesh), gắn texture và cấu hình hiệu ứng ánh sáng trên web.</p>
+                <p>Review toàn bộ logic code. Trực tiếp căn chỉnh CSS responsive, thiết kế UI/UX popup, xử lý hiệu ứng chuyển cảnh và vòng đời component.</p>
               </div>
             </div>
           </div>
@@ -123,16 +106,16 @@ const AIUsage = () => {
           <div className="tool-row">
             <div className="tool-info">
               <span className="tool-icon">✨</span>
-              <span className="tool-name">Gemini</span>
+              <span className="tool-name">Gemini / Midjourney</span>
             </div>
             <div className="tool-details">
               <div className="tool-col ai-col">
                 <h5>VAI TRÒ CỦA AI (INPUT THÔ)</h5>
-                <p>Tạo hình ảnh 2D, texture bề mặt (VD: vân gỗ, kim loại).</p>
+                <p>Khôi phục, làm nét hoặc sinh ra một số hình ảnh nền minh họa bối cảnh lịch sử (khi nguồn tư liệu quá mờ).</p>
               </div>
               <div className="tool-col human-col">
                 <h5>🧑‍🎓 SINH VIÊN XỬ LÝ (HOÀN THIỆN)</h5>
-                <p>Dùng Photoshop cắt nền, chỉnh màu đồng bộ với thiết kế UI tổng thể của dự án.</p>
+                <p>Tinh chỉnh màu sắc, độ sáng tối (dark overlay) bằng CSS để đảm bảo khả năng đọc chữ tốt trên web, cắt ghép cho khớp tỷ lệ khung hình.</p>
               </div>
             </div>
           </div>

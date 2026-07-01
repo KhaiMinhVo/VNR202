@@ -19,6 +19,7 @@ const scenes = [
     id: 'photo-1',
     type: 'image-only',
     bg: '/1.jpg',
+    answer: 'Ngày 8/3/1965, quân Mỹ chính thức đổ bộ vào Đà Nẵng'
   },
   {
     id: 'boi-canh',
@@ -104,6 +105,7 @@ const scenes = [
     id: 'photo-2',
     type: 'image-only',
     bg: '/2.jpg',
+    answer: 'Chủ tịch Hồ Chí Minh chủ trì Hội nghị Bộ Chính trị bàn về Chiến dịch Tết Mậu Thân 1968.'
   },
   {
     id: 'mau-than',
@@ -158,6 +160,7 @@ const scenes = [
     id: 'photo-3',
     type: 'image-only',
     bg: '/3.jpg',
+    answer: 'Bộ đội tên lửa những ngày đánh trận Điện Biên Phủ trên không.'
   },
   {
     id: 'dien-bien-phu-trk',
@@ -200,6 +203,7 @@ const scenes = [
     id: 'photo-4',
     type: 'image-only',
     bg: '/4.jpg',
+    answer: 'Đại thắng 1975 Cổng dinh độc lập'
   },
   {
     id: 'thong-nhat',
@@ -221,7 +225,12 @@ const scenes = [
    ============================================ */
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [revealedImages, setRevealedImages] = useState({});
   const sceneRefs = useRef([]);
+
+  const toggleReveal = (id) => {
+    setRevealedImages(prev => ({ ...prev, [id]: !prev[id] }));
+  };
 
   // Scroll progress
   const handleScroll = useCallback(() => {
@@ -309,14 +318,26 @@ function App() {
     }
 
     if (scene.type === 'image-only') {
+      const isRevealed = revealedImages[scene.id];
       return (
         <section
           key={scene.id}
           id={scene.id}
           ref={(el) => (sceneRefs.current[index] = el)}
-          className="scene image-only-scene"
+          className={`scene image-only-scene ${isRevealed ? 'revealed' : ''}`}
+          onClick={() => toggleReveal(scene.id)}
         >
           <img src={scene.bg} alt="" className="image-only-img" />
+          {!isRevealed && (
+            <div className="click-hint">
+              <span className="hint-icon">👆</span> Bấm vào ảnh để khám phá
+            </div>
+          )}
+          {isRevealed && (
+            <div className="image-answer-overlay fade-in-answer">
+              <p className="image-answer-text">{scene.answer}</p>
+            </div>
+          )}
         </section>
       );
     }

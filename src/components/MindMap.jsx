@@ -39,7 +39,7 @@ const EVENT_DETAILS = {
   'mau-than-1': {
     title: 'Tổng tiến công và nổi dậy toàn miền',
     content: 'Đêm 30, rạng sáng mùng 1 Tết Mậu Thân 1968, quân dân ta đồng loạt tiến công và nổi dậy ở 37 thị xã, hàng trăm thị trấn, đánh thẳng vào các cơ quan đầu não của địch ở Sài Gòn, Huế...',
-    images: ['/34.jpg', '/35.jpg', '/36.jpg'],
+    images: ['/34.jpg', '/35.jpg', '/36.jpg', '/42.jpg'],
     articleUrl: 'https://www.qdnd.vn/50nam-tong-tien-cong-va-noi-day-xuan-mau-than1968/danh-gia-phan-tich/cuoc-tong-tien-cong-va-noi-day-tet-mau-than-1968-trong-tien-trinh-lich-su-viet-nam-532112',
     videoUrl: 'https://www.youtube.com/watch?v=4Ns3quhYoKQ'
   },

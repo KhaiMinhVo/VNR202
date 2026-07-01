@@ -39,19 +39,24 @@ const EVENT_DETAILS = {
   'mau-than-1': {
     title: 'Tổng tiến công và nổi dậy toàn miền',
     content: 'Đêm 30, rạng sáng mùng 1 Tết Mậu Thân 1968, quân dân ta đồng loạt tiến công và nổi dậy ở 37 thị xã, hàng trăm thị trấn, đánh thẳng vào các cơ quan đầu não của địch ở Sài Gòn, Huế...',
-    images: ['/scene_1968.jpg', '/scene_1965.jpg'],
+    images: ['/34.jpg', '/35.jpg', '/36.jpg'],
     articleUrl: 'https://www.qdnd.vn/50nam-tong-tien-cong-va-noi-day-xuan-mau-than1968/danh-gia-phan-tich/cuoc-tong-tien-cong-va-noi-day-tet-mau-than-1968-trong-tien-trinh-lich-su-viet-nam-532112',
     videoUrl: 'https://www.youtube.com/watch?v=4Ns3quhYoKQ'
+  },
+  'sai-gon-gia-dinh': {
+    title: 'Mặt trận Sài Gòn - Gia Định',
+    content: 'Sài Gòn - Gia Định được Trung ương Đảng xác định là hướng tiến công chủ yếu, nơi tập trung bộ máy quân sự, chính trị và hành chính của Mỹ và chính quyền Sài Gòn. Mục tiêu của ta là đánh thẳng vào các cơ quan đầu não nhằm gây chấn động mạnh về quân sự, chính trị và tâm lý.',
+    images: ['/37.jpg', '/38.jpg']
   },
   'mau-than-2': {
     title: 'Làm phá sản "Chiến tranh cục bộ"',
     content: 'Thắng lợi của chiến dịch Mậu Thân đã làm lung lay ý chí xâm lược của Mỹ, buộc Tổng thống Johnson phải tuyên bố ngừng ném bom miền Bắc và thừa nhận sự phá sản của chiến lược "Chiến tranh cục bộ".',
-    images: ['/scene_1968.jpg', '/scene_north.jpg']
+    images: ['/39.jpg']
   },
   'mau-than-3': {
     title: 'Mỹ buộc phải ngồi vào bàn đàm phán',
     content: 'Sau đòn đau Mậu Thân, Mỹ buộc phải chấp nhận ngồi vào bàn đàm phán bốn bên tại Paris để giải quyết vấn đề hòa bình ở Việt Nam.',
-    images: ['/scene_1968.jpg', '/scene_1972.jpg']
+    images: ['/40.jpg', '/41.jpg']
   },
   'chong-pha-hoai-2': {
     title: 'Chống chiến tranh phá hoại lần 2',
@@ -123,6 +128,7 @@ const BRANCHES = [
     period: '(Năm 1968)',
     leaves: [
       { key: 'mau-than-1', text: 'Tổng tiến công và nổi dậy toàn miền' },
+      { key: 'sai-gon-gia-dinh', text: 'Mặt trận Sài Gòn - Gia Định' },
       { key: 'mau-than-2', text: 'Làm phá sản "Chiến tranh cục bộ"' },
       { key: 'mau-than-3', text: 'Mỹ buộc phải ngồi vào bàn đàm phán' }
     ]

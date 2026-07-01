@@ -16,6 +16,11 @@ const scenes = [
     overlay: 'heavy',
   },
   {
+    id: 'photo-1',
+    type: 'image-only',
+    bg: '/1.jpg',
+  },
+  {
     id: 'boi-canh',
     type: 'narrative',
     bg: '/scene_1965.jpg',
@@ -96,6 +101,11 @@ const scenes = [
     ],
   },
   {
+    id: 'photo-2',
+    type: 'image-only',
+    bg: '/2.jpg',
+  },
+  {
     id: 'mau-than',
     type: 'narrative',
     bg: '/scene_1968.jpg',
@@ -145,6 +155,11 @@ const scenes = [
     },
   },
   {
+    id: 'photo-3',
+    type: 'image-only',
+    bg: '/3.jpg',
+  },
+  {
     id: 'dien-bien-phu-trk',
     type: 'narrative',
     bg: '/scene_1972.jpg',
@@ -180,6 +195,11 @@ const scenes = [
         </ul>
       ),
     },
+  },
+  {
+    id: 'photo-4',
+    type: 'image-only',
+    bg: '/4.jpg',
   },
   {
     id: 'thong-nhat',
@@ -284,6 +304,19 @@ function App() {
               <div className="chevron" />
             </div>
           </div>
+        </section>
+      );
+    }
+
+    if (scene.type === 'image-only') {
+      return (
+        <section
+          key={scene.id}
+          id={scene.id}
+          ref={(el) => (sceneRefs.current[index] = el)}
+          className="scene image-only-scene"
+        >
+          <img src={scene.bg} alt="" className="image-only-img" />
         </section>
       );
     }

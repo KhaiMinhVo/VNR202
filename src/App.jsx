@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { FaStar } from 'react-icons/fa';
+// import { FaStar } from 'react-icons/fa';
 import Chatbot from './components/Chatbot';
 import MindMap from './components/MindMap';
 import AIUsage from './components/AIUsage';
@@ -455,7 +455,12 @@ function App() {
 
       {/* Footer */}
       <footer className="cinematic-footer">
-        <div className="star"><FaStar /></div>
+        <div className="star">
+          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="30" viewBox="0 0 900 600" style={{ borderRadius: '2px', boxShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
+            <rect width="900" height="600" fill="#da251d"/>
+            <polygon points="450,114 532,367 317,210 583,210 368,367" fill="#ffff00"/>
+          </svg>
+        </div>
         <p>Tự hào lịch sử vẻ vang của Đảng Cộng sản Việt Nam</p>
         <p>Thiết kế dành riêng cho môn VNR202 — Lịch sử Đảng</p>
       </footer>

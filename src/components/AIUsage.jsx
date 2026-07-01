@@ -18,7 +18,6 @@ const AIUsage = () => {
           <h3 className="card-title">
             <span className="card-icon">⛨</span> 1. Cam Kết Liêm Chính & Trách Nhiệm
           </h3>
-          <p className="card-meta">(Đáp ứng mục 4.2 & 4.4)</p>
           
           <div className="card-content-stack">
             <div className="content-block">
@@ -42,7 +41,6 @@ const AIUsage = () => {
           <h3 className="card-title">
             <span className="card-icon">⚡</span> 2. Ứng Dụng Sáng Tạo
           </h3>
-          <p className="card-meta">(Đáp ứng mục 4.3)</p>
           
           <div className="card-content-grid">
             <div className="content-block">
@@ -64,7 +62,6 @@ const AIUsage = () => {
 
         <div className="ai-usage-tools-header">
           <h3>3. Bảng Phân Định Công Cụ AI</h3>
-          <p className="card-meta">(Đáp ứng mục 4.1)</p>
         </div>
 
         <div className="tools-list">

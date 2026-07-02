@@ -226,14 +226,15 @@
 
 /* ---- TYPOGRAPHY ---- */
 .scene-year {
-  font-family: var(--font-typewriter);
-  font-size: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
   color: var(--color-gold);
   text-transform: uppercase;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
   opacity: 1;
-  text-shadow: 0 0 10px rgba(212, 167, 69, 0.4);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(212, 167, 69, 0.6);
 }
 
 .scene-title {
@@ -482,9 +483,12 @@
 /* ---- VICTORY SCENE ---- */
 .victory-scene .scene-title {
   font-size: 4rem;
-  background: linear-gradient(135deg, var(--color-gold) 0%, #ff6b00 50%, var(--color-red) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-gold);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 167, 69, 0.4);
+}
+
+.victory-scene .scene-title .highlight {
+  color: #ff6b00;
 }
 
 /* ---- CONCLUSION SCENE ---- */

@@ -234,7 +234,13 @@
   letter-spacing: 4px;
   margin-bottom: 12px;
   opacity: 1;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(212, 167, 69, 0.6);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 16px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(212, 167, 69, 0.2);
 }
 
 .scene-title {

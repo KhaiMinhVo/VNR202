@@ -46,7 +46,7 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      const model = activeGenAI.getGenerativeModel({ model: 'gemini-robotics-er-1.6-preview' });
+      const model = activeGenAI.getGenerativeModel({ model: 'gemini-3.5-flash' });
       
       const prompt = `Bạn là hệ thống AI hỗ trợ học tập môn Lịch sử Đảng. Nhiệm vụ của bạn là trả lời câu hỏi DỰA TRÊN dữ liệu dưới đây.
 YÊU CẦU QUAN TRỌNG:
